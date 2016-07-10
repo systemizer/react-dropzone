@@ -6,6 +6,7 @@
   "scripts": {
     "build": "npm run clean && webpack",
     "clean": "rimraf ./dist",
+    "prepublish": "npm run prerelease",
     "prerelease": "npm run eslint:src && npm run build && npm run test:build",
     "release": "npmpub",
     "test": "npm run eslint:src && mocha --require ./mocha-environment.js ./src/test.js",
